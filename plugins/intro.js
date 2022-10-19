@@ -32,16 +32,16 @@ let krtu = `0ཻུ۪۪ꦽꦼ̷⸙‹•═════════════�
 │ *Kelas      :* 
 │ *Asal         :* 
 │ *Agama    :* 
-|  *Status     :* 
+ |  *Status     :* 
 ╰═════ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙
 `
 let wibu = `https://api-reysekha.herokuapp.com/api/random/cosplay?apikey=apirey` 
 let thumb = await(await fetch(wibu)).buffer()
-conn.sendButtonDoc(m.chat, krtu, 'Script : https://youtube.com/channel/UCjoPsysjCn2Qa0dRalUb2mg\nSubs Tod!!','MENU','.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://youtube.com/channel/UCjoPsysjCn2Qa0dRalUb2mg",
+conn.sendButtonDoc(m.chat, krtu, 'Instagram : Instagram.com/saya_asroriamin\nFollow!!','MENU','.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: "https://instagram.com/saya_asroriamin",
     mediaType: "VIDEO",
-    description: "https://youtube.com/channel/UCjoPsysjCn2Qa0dRalUb2mg", 
-    title: 'Al? Offc',
+    description: "https://instagram.com/saya_asroriamin", 
+    title: 'Rikka Takanashi',
     body: wm,
     thumbnail: thumb,
     sourceUrl: sgc
