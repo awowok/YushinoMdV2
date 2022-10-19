@@ -53,23 +53,14 @@ title: `⟥⟝⟢⟨ Sᴇᴡᴀ Bᴏᴛ ⟩⟣⟞⟤`,
 rows: [
 {title: "⟣⟨ HEMAT ⟩⟢",
 rowId: '.store sewabottt 7 Hari',
-description: 'Pʀɪᴄᴇ Sᴇᴡᴀ 5 ᴋ : 7 Hᴀʀɪ' },
-{title: "⟣⟨ NORMAL ⟩⟢",
-rowId: '.store sewabottt 15 Hari',
-description: 'Pʀɪᴄᴇ Sᴇᴡᴀ 10 ᴋ : 15 Hᴀʀɪ' },
-{title: "⟣⟨ STANDAR ⟩⟢",
-rowId: '.store sewabottt 30 hari',
-description: 'Pʀɪᴄᴇ Sᴇᴡᴀ 20 ᴋ : 30 Hᴀʀɪ' },
-{title: "⟣⟨ PRO ⟩⟢",
-rowId: '.store sewabottt 40 hari',
-description: 'Pʀɪᴄᴇ Sᴇᴡᴀ 25 ᴋ : 40 Hᴀʀɪ' },
+description: 'Pʀɪᴄᴇ Sᴇᴡᴀ 5 ᴋ : 1 Bulan' },
 ]},
 {
 title: `${htjava} PREMIUM ✦-------`,
 rows: [
 {title: "🌟 HEMAT", 
 rowId: '.order *Paket:* HEMAT • Premium', 
-description: 'PRICE: ' + ph + 'k (1 minggu)' },
+description: 'PRICE: ' + 10 + 'k (1 bulan)' },
 ]},
 ]
 
