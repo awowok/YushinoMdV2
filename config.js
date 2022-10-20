@@ -106,7 +106,7 @@ global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuw
 global.bottime = `T I M E : ${wktuwib}`
 global.titlebot = `Takanashi Rikka`
 global.stickpack = 'Takanashi Rikka'
-global.stickauth = `© RIKKA BOT MD`
+global.stickauth = `© Asrori Amin`
 global.week = `${week} ${date}`
 global.wibb = `${wktuwib}`
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ OWNER INFO ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
