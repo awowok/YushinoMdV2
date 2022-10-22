@@ -1,28 +1,29 @@
-import { tiktokdl, tiktokdlv2, tiktokdlv3 } from '@bochilteam/scraper'
-
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
-    const { author: { nickname }, video, description } = await tiktokdl(args[0])
-    .catch(async _ => await tiktokdlv2(args[0]))
-        .catch(async _ => await tiktokdlv3(args[0]))
-    const url = video.no_watermark || video.no_watermark2 || video.no_watermark_raw
-    if (!url) throw 'Can\'t download video!'
-    conn.sendFile(m.chat, url, 'tiktok.mp4', 
-`
-⟐⟞⟚⟝⟮ *Usᴇʀɴᴀᴍᴇ:* ⟯⟞⟚⟝⟐
-┇⟣⟪ ${nickname} ⟫⟢
-▥ ━┉┄┄┈┈ ▢
-
-┇⟐⟞⟚⟝⟮ *Dᴇsᴄʀɪᴘᴛɪᴏɴ:* ⟯⟞⟚⟝⟐
-▥ ━┉┄┄┈┈ ▢
-${description}
-◈ ━┉┈┄┈┈ ►
-
-script : https://youtube.com/channel/UCjoPsysjCn2Qa0dRalUb2mg
-`.trim(), m)
+import fetch from 'node-fetch'
+import axios from 'axios'
+let handler = async (m, { conn, args }) => {
+  if (!args[0]) throw 'Uhm...url nya mana?'
+  try {
+  let res = await fetch(`https://api.lolhuman.xyz/api/tiktok?apikey=${global.lolkey}&url=${args[0]}`)
+    let json = await res.json()
+    let txt = `ðŸš€ *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
+    conn.sendButton(m.chat, json.result.link, txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, m)
+    } catch {
+    try {
+    let res = await fetch(`https://api.lolhuman.xyz/api/tiktok2?apikey=${global.lolkey}&url=${args[0]}`)
+    let json = await res.json()
+    let txt = `ðŸš€ *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
+    conn.sendButton(m.chat, json.result.link, txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, m)
+    } catch {
+    let res = await fetch(`https://api.lolhuman.xyz/api/tiktok3?apikey=${global.lolkey}&url=${args[0]}`)
+    let json = await res.json()
+    let txt = `ðŸš€ *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
+    conn.sendButton(m.chat, json.result.link, txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, m)
+    }
+  }
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(tiktok|tt|ttdl|tiktokdl)$/i
+
 
 export default handler
